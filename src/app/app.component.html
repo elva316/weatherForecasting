@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+    </head>
+    <body>
+        <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand"> <h1> Fair Weather Travel  </h1></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="top">
+        <div class="innerTop">
+            <div class="center">
+                <form name="myButton" action="app.component.html#show" (submit)="getInfo()" #formData="ngForm" action="#show">
+                    <br>
+                    <h1 class="displayCenter">Which City Are You Traveling?</h1>
+                    <br>
+                    <input type="text" name="cityname" required [(ngModel)]="city" placeholder="City">
+                    <button onClick="document.getElementById('show').scrollIntoView();" type="submit" [disabled]="!formData.valid">  GO</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="box2">
+        <div class="left">
+            <div class="ima">
+                <img src="../assets/7.png" alt="">
+            </div>
+            <div class='r' id="show">
+                <h1>Weather Forecast</h1>
+                <strong> <span class="i" >City:</span> {{ city }}</strong><br>
+                <strong> <span class="i" >Humidity:</span> {{ humidity }}</strong><br>
+                <strong> <span class="i" >Temperature(Average): </span>{{ tempAve }}</strong><br>
+                <strong> <span class="i" >Temperature(High): </span>{{ tempMax }}</strong><br>
+                <strong> <span class="i" >Temperature(Low): </span>{{ tempMin }}</strong><br>
+                <strong> <span class="i" >Status: </span>{{ status }}</strong><br>
+            </div>
+        </div>
+
+
+        <h1>Discover fun activities & delicious food on Tripadvisor</h1>
+        <div class="right">
+            <iframe src="https://www.tripadvisor.com/Attractions-g60763-Activities-New_York_City_New_York.html" width="100%" height="100%" ></iframe>
+        </div>
+
+        <br>
+        <h1>Travel Related Articles...</h1>
+        <hr>
+        <a class="i" href="https://www.smartertravel.com/2017/06/19/single-travel-tips-going-solo/">Solo Travel Tips</a>
+        The article is focusing on singgle travel safety tips.
+        <hr>
+        <a class="i" href="https://www.forbes.com/sites/laurabegleybloom/2017/05/18/the-25-cheapest-places-to-travel-this-summer/#6342b2ad5790">Low Tudget Travel Location</a>
+        The 25 cheapest places to travel in summer.
+        <hr>
+        <a class="i" href="https://www.familytravel.com/">Family traveling.</a>
+        This website provide information about verything you need to know about family traveling.
+        <hr>
+        <a class="i" href="http://www.travelandleisure.com/slideshows/50-best-romantic-getaways">Romantic Getaways</a>
+        From wine-country retreats to Balinese beach idylls, 50 enchanting vacations to swoon over.
+        <hr>
+        <a class="i" href="http://rss.cnn.com/rss/cnn_travel.rss">CNN Travel Feeds</a>
+        From wine-country retreats to Balinese beach idylls, 50 enchanting vacations to swoon over.
+        <hr>
+
+        <div class="bottom">
+            <h2>For any question, <a href="mailto:elva316@gmail.com">Contact Here</a></h2>
+        </div>
+
+    </div>
+
+
+
+    </body>
+</html>
